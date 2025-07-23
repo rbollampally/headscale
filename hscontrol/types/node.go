@@ -391,7 +391,7 @@ func (node *Node) GetFQDN(baseDomain string) (string, error) {
 
 	if baseDomain != "" {
 		hostname = fmt.Sprintf(
-			"%s.%s.",
+			"%s.%s",
 			node.GivenName,
 			baseDomain,
 		)

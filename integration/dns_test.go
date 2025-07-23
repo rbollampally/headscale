@@ -48,7 +48,7 @@ func TestResolveMagicDNS(t *testing.T) {
 			// It is safe to ignore this error as we handled it when caching it
 			peerFQDN, _ := peer.FQDN()
 
-			assert.Equal(t, peer.Hostname()+".headscale.net.", peerFQDN)
+			assert.Equal(t, peer.Hostname()+".headscale.net", peerFQDN)
 
 			assert.EventuallyWithT(t, func(ct *assert.CollectT) {
 				command := []string{
